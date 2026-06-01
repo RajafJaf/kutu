@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Diri Lengkap</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:url('foto.jpg') center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:-1;
+}
+
+.card{
+    width:800px;
+    max-width:100%;
+    background:rgba(255,255,255,0.95);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.header{
+    background:linear-gradient(135deg,#007bff,#00c6ff);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.profile{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.content{
+    padding:25px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+td:first-child{
+    font-weight:bold;
+    width:35%;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.btn:hover{
+    background:#0056b3;
+}
+
+#pesan{
+    margin-top:15px;
+    color:green;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="card">
+
+    <div class="header">
+        <img src="foto.jpg" alt="Foto Profil" class="profile">
+        <h1>DATA DIRI</h1>
+        <h3>prajunet</h3>
+    </div>
+
+    <div class="content">
+
+        <table>
+            <tr>
+                <td>Nama Lengkap</td>
+                <td>prajunet</td>
+            </tr>
+            <tr>
+                <td>Tempat, Tanggal Lahir</td>
+                <td>Padang, 17,agustus 1245</td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>Laki-laki</td>
+            </tr>
+            <tr>
+                <td>Agama</td>
+                <td>private</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>jawa,jawa selatan</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>prajunet@email.com</td>
+            </tr>
+            <tr>
+                <td>No HP</td>
+                <td>08521245780963 dst..</td>
+            </tr>
+            <tr>
+                <td>Pendidikan</td>
+                <td>memahami tentang kutu loncat</td>
+            </tr>
+            <tr>
+                <td>Jurusan</td>
+                <td>tektnik kipas-kipas</td>
+            </tr>
+            <tr>
+                <td>Hobi</td>
+                <td>main epep</td>
+            </tr>
+            <tr>
+                <td>Cita-cita</td>
+                <td>profesor yang ytta aja</td>
+            </tr>
+        </table>
+
+        <button class="btn" onclick="salam()">
+            Klik Saya
+        </button>
+
+        <p id="pesan"></p>
+
+    </div>
+</div>
+
+<script>
+function salam(){
+    document.getElementById("pesan").innerHTML =
+    "Halo suki liar :)";
+}
+</script>
+
+</body>
+</html>
